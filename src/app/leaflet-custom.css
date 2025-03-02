@@ -1,0 +1,47 @@
+/* Custom CSS to fix Leaflet icon issues */
+
+/* Override problematic icon URLs with SVG content */
+.leaflet-control-layers-toggle {
+  background-image: none !important;
+  position: relative;
+}
+
+.leaflet-control-layers-toggle::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background-color: #fff;
+  border: 2px solid #666;
+  border-radius: 2px;
+}
+
+.leaflet-control-layers-toggle::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  right: 9px;
+  height: 2px;
+  background-color: #666;
+  box-shadow: 0 4px 0 #666, 0 8px 0 #666;
+}
+
+.leaflet-default-icon-path {
+  background-image: none !important;
+}
+
+/* Style for zoom controls */
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+  font: bold 18px 'Lucida Console', Monaco, monospace;
+}
+
+/* Style for attribution control */
+.leaflet-control-attribution {
+  background: rgba(255, 255, 255, 0.8) !important;
+  padding: 0 5px;
+  font-size: 11px;
+} 
